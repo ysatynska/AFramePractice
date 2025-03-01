@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src ="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src ='new_prim.js'></script>
+  </head>
+  <body>
+
+    <a-scene background="color: #1f120f">
+      <a-entity cursor = "rayOrigin:mouse"></a-entity>
+      <a-entity custom-plane-builder="filename:inputdata.txt; elevation: true"  id="segmented-plane" 
+                geometry="primitive:plane; height:5 ;width:5"  
+                position = "0 0 -5" rotation="90 0 0" 
+                material="wireframe: false; color: #FF5733; side:double"   >
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
