@@ -7,6 +7,7 @@ AFRAME.registerComponent("custom-plane-builder", {
 
   init: async function () {
     //if elevation is true, attach the listener now (before setAttribute).
+    console.log(this.data.filename);
     if (this.data.elevation) {
       this.el.addEventListener(
         "componentchanged",
@@ -20,7 +21,7 @@ AFRAME.registerComponent("custom-plane-builder", {
     }
 
     // Fetch the file contents.
-    const response = await fetch(this.data.filename);
+    const response = await fetch(`tests/${this.data.filename}`);
     let data = await response.text();
 
     const firstNewlineIdx = data.indexOf("\n");
