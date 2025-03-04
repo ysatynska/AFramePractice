@@ -14,7 +14,7 @@ AFRAME.registerComponent("tree", {
   },
 });
 
-AFRAME.registerComponent("treeData", {
+AFRAME.registerComponent("tree-terrain", {
   schema: {
     filename: { type: "string" },
   },
