@@ -1,0 +1,13 @@
+{
+  "name": "aframepractice",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "dev": "five-server ."
+  },
+  "author": "Liz Satynska & Moazzam Maan",
+  "license": "ISC",
+  "description": "A-Frame Practice for USDA Forest Service Internship"
+}

@@ -1,0 +1,8 @@
+{
+  "port": 3000,
+  "open": true,
+  "browser": "none",
+  "https": false,
+  "watch": true,
+  "injectBody": true
+}
