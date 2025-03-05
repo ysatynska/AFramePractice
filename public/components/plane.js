@@ -1,13 +1,12 @@
 //ADD PRE AND POST CONDITIONS
 AFRAME.registerComponent("custom-plane-builder", {
   schema: {
-    filename: { type: "string", default: "inputdata" },
+    filename: { type: "string", default: "inputdata.txt" },
     elevation: { type: "boolean", default: false },
   },
 
   init: async function () {
     //if elevation is true, attach the listener now (before setAttribute).
-    console.log(this.data.filename);
     if (this.data.elevation) {
       this.el.addEventListener(
         "componentchanged",
@@ -56,7 +55,7 @@ AFRAME.registerComponent("custom-plane-builder", {
     }
 
     const positionAttr = mesh.geometry.attributes.position;
-    console.log(positionAttr);
+    // console.log(positionAttr);
     if (!positionAttr) {
       return;
     }
