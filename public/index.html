@@ -3,20 +3,33 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="./components/plane.js"></script>
     <script src="./components/trees.js"></script>
+    <script src="./components/simple-navmesh-constraint.js"></script>
   </head>
   <body>
-    <a-scene background="color: lightblue">
+    <a-scene background="color: black">
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity
-        custom-plane-builder="filename:elevation_data.txt; elevation: false"
+        custom-plane-builder="filename:elevation_data_test.txt"
+        add-elevation="elevation: true"
         id="segmented-plane"
         geometry="primitive:plane; height:5 ;width:5"
         position="0 0 -5"
         rotation="90 0 0"
         material="wireframe: true; color: #FF5733; side:double"
       >
+
       </a-entity>
-      <a-entity tree-terrain="filename:trees.txt"></a-entity>
+
+      <!-- add the sphere to test the 0 0 0 coordinate-->
+      <!-- <a-sphere test-sphere-pos position="0 0 0 " radius="0.1" color="red"></a-sphere> -->
+
+      <a-camera 
+        wasd-controls="acceleration:20;"
+        camera-boost="acceleration: 400;" 
+        look-controls>
+      </a-camera>
+      
+      <!-- <a-entity tree-terrain="filename:trees.txt" > </a-entity> -->
     </a-scene>
   </body>
-</!DOCTYPE>
+
